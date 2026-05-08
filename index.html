@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的视频与文件仓库</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        body {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            color: #2d3748;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .file-item {
+            background: white;
+            border: 1px solid #e2e8f0;
+            padding: 1rem;
+            margin: 0.8rem 0;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: box-shadow 0.2s;
+        }
+        .file-item:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .file-name {
+            font-size: 1rem;
+            color: #2d3748;
+            word-break: break-all;
+        }
+        .btn-group {
+            display: flex;
+            gap: 0.8rem;
+        }
+        .play-btn {
+            background: #28a745;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .download-btn {
+            background: #007bff;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>我的视频与文件仓库</h1>
+    <div class="file-list">
+        <!-- 视频文件示例（可以复制多份，改名字和链接） -->
+        <div class="file-item">
+            <span class="file-name">我的大视频.mp4</span>
+            <div class="btn-group">
+                <a href="替换成你的视频直链地址" class="play-btn" target="_blank">在线播放</a>
+                <a href="替换成你的视频直链地址" class="download-btn" download>下载</a>
+            </div>
+        </div>
+        <!-- 普通文件示例 -->
+        <div class="file-item">
+            <span class="file-name">重要文件.zip</span>
+            <div class="btn-group">
+                <a href="替换成你的文件直链地址" class="download-btn" download>下载</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
