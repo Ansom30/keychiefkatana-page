@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的视频与文件仓库</title>
+    <title>KeyChiefKatana - 产品介绍</title>
     <style>
         * {
             margin: 0;
@@ -12,75 +12,226 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         body {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            line-height: 1.6;
+            color: #333;
             background-color: #f8f9fa;
         }
-        h1 {
-            color: #2d3748;
-            margin-bottom: 2rem;
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部横幅 */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 60px 0;
             text-align: center;
         }
-        .file-item {
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* 产品展示区 */
+        .product-showcase {
+            padding: 50px 0;
             background: white;
-            border: 1px solid #e2e8f0;
-            padding: 1rem;
-            margin: 0.8rem 0;
+        }
+        .product-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 0 auto 30px;
+            display: block;
+        }
+
+        /* 核心卖点 */
+        .features {
+            padding: 50px 0;
+        }
+        .features h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .feature-item {
+            background: white;
+            padding: 25px;
             border-radius: 8px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: box-shadow 0.2s;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
         }
-        .file-item:hover {
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        .feature-item h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
         }
-        .file-name {
-            font-size: 1rem;
-            color: #2d3748;
-            word-break: break-all;
+
+        /* 参数表 */
+        .specs {
+            padding: 50px 0;
+            background: white;
         }
-        .btn-group {
-            display: flex;
-            gap: 0.8rem;
+        .specs h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
         }
-        .play-btn {
-            background: #28a745;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .spec-table th, .spec-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        .spec-table th {
+            background: #f8f9fa;
+            font-weight: bold;
+        }
+
+        /* 视频/下载区 */
+        .cta-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 5px;
             text-decoration: none;
-            font-size: 0.9rem;
+            font-weight: bold;
+            margin: 0 10px;
+            transition: background 0.3s;
         }
-        .download-btn {
-            background: #007bff;
+        .btn-primary {
+            background: #2c3e50;
             color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 0.9rem;
+        }
+        .btn-primary:hover {
+            background: #34495e;
+        }
+        .btn-secondary {
+            background: #3498db;
+            color: white;
+        }
+        .btn-secondary:hover {
+            background: #2980b9;
+        }
+
+        /* 页脚 */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
-    <h1>我的视频与文件仓库</h1>
-    <div class="file-list">
-        <!-- 视频文件示例（可以复制多份，改名字和链接） -->
-        <div class="file-item">
-            <span class="file-name">我的大视频.mp4</span>
-            <div class="btn-group">
-                <a href="替换成你的视频直链地址" class="play-btn" target="_blank">在线播放</a>
-                <a href="替换成你的视频直链地址" class="download-btn" download>下载</a>
+    <!-- 头部横幅 -->
+    <header class="hero">
+        <div class="container">
+            <h1>KeyChiefKatana</h1>
+            <p>专为汽车钥匙打造的高性能解决方案</p>
+        </div>
+    </header>
+
+    <!-- 产品展示区 -->
+    <section class="product-showcase">
+        <div class="container">
+            <!-- 把 src 换成你的产品图片地址 -->
+            <img src="https://via.placeholder.com/600x400?text=KeyChiefKatana+产品图" alt="KeyChiefKatana" class="product-image">
+            <h2>产品简介</h2>
+            <p style="margin-top:20px; font-size:1.1rem;">
+                KeyChiefKatana 是一款专为汽车钥匙设计的高品质配件，采用优质材料打造，耐用性强，手感舒适，同时具备防刮、防摔、防丢等多重保护功能，完美适配多种车型钥匙。
+            </p>
+        </div>
+    </section>
+
+    <!-- 核心卖点 -->
+    <section class="features">
+        <div class="container">
+            <h2>核心卖点</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h3>✅ 精准适配</h3>
+                    <p>1:1开模，完美贴合原车钥匙，不影响信号与按键使用。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>✅ 坚固耐用</h3>
+                    <p>高强度材质，抗冲击、防刮耐磨，有效保护钥匙不受损。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>✅ 超薄设计</h3>
+                    <p>轻薄不臃肿，不影响钥匙放入口袋或钱包，携带方便。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>✅ 安装简单</h3>
+                    <p>无需工具，徒手即可轻松安装拆卸，日常清洁也很方便。</p>
+                </div>
             </div>
         </div>
-        <!-- 普通文件示例 -->
-        <div class="file-item">
-            <span class="file-name">重要文件.zip</span>
-            <div class="btn-group">
-                <a href="替换成你的文件直链地址" class="download-btn" download>下载</a>
-            </div>
+    </section>
+
+    <!-- 参数规格 -->
+    <section class="specs">
+        <div class="container">
+            <h2>产品规格</h2>
+            <table class="spec-table">
+                <tr>
+                    <th>项目</th>
+                    <th>详情</th>
+                </tr>
+                <tr>
+                    <td>适用车型</td>
+                    <td>通用款/支持多种车型钥匙（可备注定制）</td>
+                </tr>
+                <tr>
+                    <td>材质</td>
+                    <td>优质TPU/ABS材质（可选）</td>
+                </tr>
+                <tr>
+                    <td>颜色选项</td>
+                    <td>黑色/透明/磨砂/定制色</td>
+                </tr>
+                <tr>
+                    <td>包装内容</td>
+                    <td>钥匙套 × 1</td>
+                </tr>
+            </table>
         </div>
-    </div>
+    </section>
+
+    <!-- 下载/视频区 -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>获取更多信息</h2>
+            <p style="margin:20px 0;">查看产品视频介绍或下载产品说明书</p>
+            <!-- 把 href 换成你的网盘直链 -->
+            <a href="替换成你的视频链接" class="btn btn-primary" target="_blank">观看产品视频</a>
+            <a href="替换成你的说明书链接" class="btn btn-secondary" download>下载产品说明</a>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 KeyChiefKatana | All Rights Reserved</p>
+        </div>
+    </footer>
 </body>
 </html>
