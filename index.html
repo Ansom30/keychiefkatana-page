@@ -236,7 +236,256 @@
             object-fit: contain;
         }
 
-        /* 16 Video Grid Section */
+        /* 12 Video Grid Section */
+        .video-grid-section {
+            margin: 60px 0;
+        }
+        .video-grid-section h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .video-grid-section h2::before {
+            content: "●";
+            color: #ff4444;
+            font-size: 12px;
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .video-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            aspect-ratio: 16/9;
+        }
+        .video-item iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .video-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .product-detail { grid-template-columns: 1fr; }
+            .video-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header h1 {
+            font-size: 32px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .header .subtitle {
+            color: var(--text-secondary);
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+
+        .header .description {
+            color: var(--text-secondary);
+            font-size: 14px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Model Selector */
+        .model-selector {
+            margin-bottom: 40px;
+        }
+
+        .model-selector h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .model-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+        }
+
+        .model-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .model-card.active {
+            border-color: var(--accent-green);
+            background-color: rgba(76, 175, 80, 0.1);
+        }
+
+        .model-card:hover {
+            border-color: var(--accent-green);
+        }
+
+        .model-card h3 {
+            font-size: 16px;
+            margin-bottom: 4px;
+            color: var(--text-primary);
+        }
+
+        .model-card p {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .coming-soon {
+            font-size: 10px;
+            color: #ff9800;
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Product Detail Section */
+        .product-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 40px 0;
+        }
+
+        .product-info h2 {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .product-info .description {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .specs {
+            margin-bottom: 20px;
+        }
+
+        .specs p {
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .view-details-btn {
+            background-color: var(--accent-green);
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .view-details-btn:hover {
+            background-color: #45a049;
+        }
+
+        .product-image {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+        }
+
+        /* Key Features Section */
+        .key-features {
+            margin: 40px 0;
+        }
+
+        .key-features h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 12px;
+        }
+
+        .feature-item {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 12px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .feature-item::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--accent-green);
+        }
+
+        /* Product Gallery */
+        .product-gallery {
+            margin: 40px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .gallery-item {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-item img {
+            max-width: 100%;
+            max-height: 150px;
+            object-fit: contain;
+        }
+
+        /* 12 Video Grid Section */
         .video-grid-section {
             margin: 60px 0;
         }
@@ -382,21 +631,22 @@
             </div>
         </div>
 
-        <!-- 16 个视频展示模块 -->
+        <!-- 12 个视频展示模块 -->
         <div class="video-grid-section">
-            <h2>Video Demonstrations (16)</h2>
+            <h2>Video Demonstrations (12)</h2>
             <div class="video-grid">
-                <div class="video-item"><iframe src="https://www.youtube.com/watch?v=0c-7VLzMSe4 allowfullscreen></iframe></div>
-                <div class="video-item"><iframe src="https://www.youtube.com/watch?v=RmlM2OpR1dI&t=2s" allowfullscreen></iframe></div>
-                <div class="video-item"><iframe src="https://www.youtube.com/watch?v=KxBdRTGwUy4" allowfullscreen></iframe></div>
-                <div class="video-item"><iframe src="https://www.youtube.com/watch?v=xXtx-LimjeA" allowfullscreen></iframe></div>
-                <div class="video-item"><iframe src="https://www.youtube.com/watch?v=ss1tbVCyLRU" allowfullscreen></iframe></div>
-                <div class="video-item"><iframe src="https://www.youtube.com/watch?v=7GS7FNDd2o8&t=2s" allowfullscreen></iframe></div>
-                <div class="video-item"><iframe src="https://www.youtube.com/watch?v=24l2SB8dz8A" allowfullscreen></iframe></div>
-                <div class="video-item"><iframe src="https://www.youtube.com/watch?v=NdtYG7ZNsFQ&t=2s" allowfullscreen></iframe></div>
-                <div class="video-item"><iframe src="https://www.youtube.com/watch?v=Se7klkjlcLI&t=3s" allowfullscreen></iframe></div>
-                <div class="video-item"><iframe src="https://www.youtube.com/watch?v=n1jwAVImSRg&t=24s" allowfullscreen></iframe></div>
-                <div class="video-item"><iframe src="https://www.youtube.com/watch?v=ZGF03AO6AAw&t=2s" allowfullscreen></iframe></div>
+                <div class="video-item"><iframe src="https://www.youtube.com/embed/0c-7VLzMSe4" allowfullscreen></iframe></div>
+                <div class="video-item"><iframe src="https://www.youtube.com/embed/RmlM2OpR1dI" allowfullscreen></iframe></div>
+                <div class="video-item"><iframe src="https://www.youtube.com/embed/KxBdRTGwUy4" allowfullscreen></iframe></div>
+                <div class="video-item"><iframe src="https://www.youtube.com/embed/xXtx-LimjeA" allowfullscreen></iframe></div>
+                <div class="video-item"><iframe src="https://www.youtube.com/embed/ss1tbVCyLRU" allowfullscreen></iframe></div>
+                <div class="video-item"><iframe src="https://www.youtube.com/embed/7GS7FNDd2o8" allowfullscreen></iframe></div>
+                <div class="video-item"><iframe src="https://www.youtube.com/embed/24l2SB8dz8A" allowfullscreen></iframe></div>
+                <div class="video-item"><iframe src="https://www.youtube.com/embed/NdtYG7ZNsFQ" allowfullscreen></iframe></div>
+                <div class="video-item"><iframe src="https://www.youtube.com/embed/Se7klkjlcLI" allowfullscreen></iframe></div>
+                <div class="video-item"><iframe src="https://www.youtube.com/embed/n1jwAVImSRg" allowfullscreen></iframe></div>
+                <div class="video-item"><iframe src="https://www.youtube.com/embed/ZGF03AO6AAw" allowfullscreen></iframe></div>
+                <div class="video-item"><iframe src="https://www.youtube.com/embed/xXtx-LimjeA" allowfullscreen></iframe></div>
             </div>
         </div>
     </div>
